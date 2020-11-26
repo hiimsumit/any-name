@@ -8,8 +8,7 @@ app.get('/',(req, res) => {
 app.listen(process.env.PORT || 3000)
 
 let passwords = new Map()
-passwords.set('sumit@gmail.com','pwd')
-passwords.set('bob@gmail.com','hello')
+passwords.set('bob@gmail.com','pwd')
 app.get('/login', (req,res) => {
     if(passwords.get(req.query.username) === req.query.password){
         console.log("if statement 1", passwords.get(req.query.username))
