@@ -11,10 +11,10 @@ let passwords = new Map()
 passwords.set('sumit@gmail.com','pwd')
 app.get('/login', (req,res) => {
     if(passwords.get(req.query.username) === req.query.password){
-        console.log('testing','testing fourth console log')
+        console.log('if statement',req.query.password)
         res.send("success")
     }else{
         res.send("login failed")
-        console.log('testing4','testing in login fail')
+        console.log('else statement',req.query.password)
     }
 })
